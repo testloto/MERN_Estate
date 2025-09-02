@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Home from './pages/Home.jsx'
-import SignOut from './pages/SignOut.jsx';
+import Signup from './pages/Signup.jsx';
 import Signin from './pages/Signin.jsx';
 import About from './pages/About.jsx';
 import Profile from './pages/Profile.jsx';
@@ -13,7 +13,7 @@ const App = () => {
     <Header/>
     <Routes>
       <Route path="/" element={<Home />}/>
-      <Route path ="/sign-out" element={<SignOut/>}/>
+      <Route path ="/sign-up" element={<Signup/>}/>
       <Route path="/sign-in" element={<Signin/>}/>
        <Route path="/about" element={<About/>}/>
       <Route path="/profile" element={<Profile/>}/>
