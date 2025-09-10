@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link ,useNavigate} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signInStart,signFailure,signInSuccess} from "../redux/user/userSlice";
+import OAuth from "../components/OAuth";
 
 const Signin = () => {
   const [formData, setFormData] = useState({});
@@ -20,7 +21,7 @@ const Signin = () => {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      setLoading(true);
+      // setLoading(true);
       try {
         const res = await fetch("/api/auth/signin", {
           method: "POST",
@@ -71,6 +72,7 @@ const Signin = () => {
         >
           {loading ? "Loading..." : "Sign In"}
         </button>
+        <OAuth/>
       </form>
 
       <div className="flex gap-2 mt-5">
